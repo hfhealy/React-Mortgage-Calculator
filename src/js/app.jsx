@@ -8,13 +8,18 @@ export default class App extends React.Component {
     this.handleChange = this.handleChange.bind(this);
     this.calculate = this.calculate.bind(this);
   }
-  /*handleChange to update state values when an input changes. Add an onChange to the HTML event to each of the input elements that calls handleChange function.*/
+  /*handleChange to update state values when an input changes. 
+  Add an onChange to the HTML event to each of the input elements 
+  that calls handleChange function.*/
 
   handleChange(event) {
     this.setState({[event.target.name]: parseFloat(event.target.value) || 0});
   }
 
-  /* Calculate function to determine the mortgage payment and then set state to bind the result to the div with an id of output as a string. Add an onClick event to the button that calls the calculate function while passing the state object as an argument. */
+  /* Calculate function to determine the mortgage payment and then 
+  set state to bind the result to the div with an id of output 
+  as a string. Add an onClick event to the button that calls 
+  the calculate function while passing the state object as an argument. */
   
   calculate() {
     const {term, balance, rate} = this.state;
